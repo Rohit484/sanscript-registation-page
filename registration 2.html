@@ -1,0 +1,65 @@
+<html>
+<head>
+<style>
+td{
+	padding:10;
+}
+</style>
+<title>javascript</title>
+</head>
+<body>
+<h1 align='center'	>Registration Form Validation Using JavaScript</h1>
+<form name='frm'>
+<table align="center" border='2'>
+<tr><td>First name</td><td><input type='text' id='ud' name='name' value=''/></td></tr><br>
+<tr><td>Middle name</td><td><input type='text' id='mn' name='mname' value=''/></td></tr><br>
+<tr><td>Last name</td><td><input type='text' id='lu' 'name='lname' value=''/></td></tr><br>
+<tr><td>Mobile Number</td><td><input type='text' id='no' name='mono' value='' placeholder='mobile number max is 10'/></td></tr><br>
+<tr><td>Email Id</td><td><input type='text' id='eid' name='email' value='' placeholder='sam@example.com'/></td></tr><br>
+<tr><td align='center'><input type='submit' onclick='validatefield()'name='s' value='submit'/><td></tr>
+</table>
+<script language="javascript">
+function validatefield()
+	{
+	var fname=document.getElementById("ud").value;
+	var mname=document.getElementById("mn").value;
+	var lname=document.getElementById("lu").value;
+	var mon=document.getElementById("no").value;
+	var email=document.getElementById("eid").value;
+	
+	
+						if (fname=="")
+						{
+					alert("Please provide first name");
+						}	
+						if (mname=="")
+						{
+					alert("Please provide middle name");
+						}	
+					if (lname=="")
+						{
+					alert("Please provide last name");
+						}	
+					
+					
+						if (mon=="") {
+					alert("Please provide mobile number");
+						}
+						
+					if (mon.length<10 || mon.length>10)
+						{
+					alert("Mobile number must be 10");					
+						}	
+							
+						if (email=="")
+						{
+				alert("Please provide email address")	;					
+						}
+						
+	}
+
+</script>
+
+</form>
+</body>
+</html>
